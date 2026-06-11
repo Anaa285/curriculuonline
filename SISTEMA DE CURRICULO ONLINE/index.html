@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ÍCONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Profile</title>
+    <style>
+    :root {
+        --rosa-principal: #f8b6c8;
+        --rosa-claro: #fde2e7;
+        --rosa-escuro: #e89ab0;
+        --rosa-footer: #d98ca3;
+    }
+
+    body {
+        background-color: #fff7f9;
+    }
+
+    /* Navbar */
+    .navbar {
+        background-color: var(--rosa-claro) !important;
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: #8d4f66 !important;
+    }
+
+    .nav-link:hover {
+        color: var(--rosa-escuro) !important;
+    }
+
+    /* Botões principais */
+    .btn-primary {
+        background-color: var(--rosa-principal);
+        border-color: var(--rosa-principal);
+        color: #6e3d4e;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--rosa-escuro);
+        border-color: var(--rosa-escuro);
+        color: white;
+    }
+
+    /* Botão secundário */
+    .btn-secondary {
+        background-color: #f4d6df;
+        border-color: #f4d6df;
+        color: #8d4f66;
+    }
+
+    .btn-secondary:hover {
+        background-color: #ecc2d0;
+        border-color: #ecc2d0;
+    }
+
+    /* Botão "Sobre Mim" */
+    .btn-danger {
+        background-color: #f5a9bc;
+        border-color: #f5a9bc;
+    }
+
+    .btn-danger:hover {
+        background-color: #ea8faa;
+        border-color: #ea8faa;
+    }
+
+    /* Cards */
+    .card {
+        border: none;
+        background-color: #fffafb;
+    }
+
+    /* Accordion */
+    .accordion-button:not(.collapsed) {
+        background-color: #fde2e7;
+        color: #8d4f66;
+    }
+
+    .accordion-button:focus {
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    /* Footer */
+    footer {
+        background-color: var(--rosa-footer) !important;
+    }
+
+    footer .btn {
+        border-color: white;
+        color: white;
+    }
+
+    footer .btn:hover {
+        background-color: white;
+        color: var(--rosa-footer);
+    }
+
+    footer i:hover {
+        color: #fff0f5;
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+</style>
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4 py-3">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                Home
+            </a>
+
+            <!-- BOTÃO MOBILE -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarConteudo">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarConteudo">
+
+                <div class="navbar-nav">
+
+                    <a class="nav-link fw-bold text-primary" href="portifolio.html">
+
+                        Portfólio
+                    </a>
+
+                    <a class="nav-link fw-bold text-primary" href="contato.html">
+
+                        Contato
+                    </a>
+
+                </div>
+
+                <!-- NOTIFICAÇÃO -->
+                <button type="button" class="btn btn-dark position-relative px-4 py-2 rounded-4 fs-6 mt-3 mt-lg-0">
+
+                    <i class="fa-regular fa-bell"></i>
+                    Notificações
+
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                        99+
+
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+        <form class="d-flex  ">
+            <input type="text" class="form-control me-2" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+        </form>
+
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <div class="container-fluid mt-4">
+
+        <!-- DROPDOWN + SOBRE MIM -->
+        <div class="d-flex align-items-center gap-3 mt-3 ms-3">
+
+            <!-- DROPDOWN -->
+            <div class="dropdown">
+
+                <button class="btn btn-secondary dropdown-toggle px-2 py-1 rounded-4 fs-6" type="button"
+                    data-bs-toggle="dropdown">
+
+                    Menu Dropdown
+                </button>
+
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a class="dropdown-item" href="portifolio.html">
+                            Portifólio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="contato.html ">
+                            Fale Conosco!
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SOBRE MIM -->
+            <div>
+
+                <button class="btn btn-danger px-3 py-1 rounded-3 ms-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sobreMim">
+
+                    Sobre mim
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TEXTO SOBRE MIM -->
+        <div class="collapse mt-3" id="sobreMim">
+
+            <div class="card card-body shadow mx-auto" style="max-width: 1100px;">
+
+             Sou uma pessoa bastante inteligente, interresada em aprender coisas
+             novas, e estou disposta a crescer e ajudar no desenvolvimento da empresa
+
+            </div>
+
+        </div>
+
+        <!-- BOTÃO VER PERFIL -->
+        <div class="text-center mt-5">
+
+            <button class="btn btn-primary px-5 py-3 rounded-4 shadow fs-5" data-bs-toggle="modal"
+                data-bs-target="#perfilModal">
+
+                Ver Perfil
+
+            </button>
+
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal fade" id="perfilModal" tabindex="-1">
+
+            <div class="modal-dialog modal-dialog-centered">
+
+                <div class="modal-content rounded-4">
+
+                    <!-- HEADER -->
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">
+                            Meu Perfil
+                        </h5>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal">
+
+                        </button>
+
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body text-center">
+
+                        <!-- IMAGEM -->
+                        <img src="fotoana.jpeg" class="img-fluid rounded-4 shadow mb-3" alt="Imagem Perfil">
+
+                        <!-- TEXTO -->
+                        <p class="fs-5">
+
+                            Olá! Esse é meu perfil.
+                            Sou a Ana Clara, faço curso tecnico de Desenvolvimento de Sistemas, gosto muito do curso!
+                            Sou muito inteligente. Uma das minhas habilidades é o trabalho colaborativo.
+                            
+                        </p>
+
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+
+                            Fechar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ACCORDION -->
+        <div class="accordion mt-5" id="accordionExample">
+
+            <!-- ITEM 1 -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">
+
+                        Experiência Profissional
+
+                    </button>
+
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+
+                       Jovem Aprendiz proveniente da Usina açucareira São Manoel SA
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo">
+
+                        Habilidades
+
+                    </button>
+
+                </h2>
+
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+
+                        Soft skills: 
+                        Facil Comunicação;
+                        Proativa;
+                        Organizada;
+                        Inteligente;
+                        Responsavel
+        
+                        Hard skills:
+                        HTML e CSS
+                        JavaScript
+                        Git e GitHub
+                        Banco de Dados (SQL/MySQL)
+                        Bootstrap
+                        React
+                        Node.js
+                        Python ou Java
+                        Consumo de APIs
+                        Testes e versionamento de código.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree">
+
+                        Formação
+
+                    </button>
+
+                </h2>
+
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+
+                        
+                        Ensino Fundamental Completo
+                        Ensino Medio integrado com o técnico
+                        Cursos pelo Senai Botucatu-SP: 
+                        Segurança do trabalho;
+                        Excel Basico;
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-center text-white mt-auto p-5">
+
+        <button class="btn btn-outline-primary px-5 py-3 fs-5 rounded-3">
+
+            Informações para Contato
+
+        </button>
+
+        <div class="mt-4">
+
+            <i class="fa-brands fa-instagram fa-3x mx-3"></i>
+
+            <i class="fa-brands fa-linkedin fa-3x mx-3"></i>
+
+            <i class="fa-brands fa-github fa-3x mx-3"></i>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
